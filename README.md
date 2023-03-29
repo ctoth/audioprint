@@ -47,7 +47,7 @@ hash_value = fingerprint_file(file_path)
 
 Audioprint provides a main function:
 ```python
-fingerprint_file(file_path: str, n_mfcc: int = 16) -> int
+fingerprint_file(file_path: str, n_mfcc: int = 32) -> int
 ```
 :
 Reads an audio file, computes the perceptual hash for the given file, and returns an integer hash value.
@@ -61,7 +61,7 @@ read_audio_file(file_path: str) -> Tuple[np.ndarray, int]
 Reads an audio file using ```audioread``` and returns the raw PCM data and sample rate.
 
 ```python
-audio_phash(raw_pcm_data: np.ndarray, sr: int, n_mfcc: int = 16) -> int
+audio_phash(raw_pcm_data: np.ndarray, sr: int, n_mfcc: int = 32) -> int
 ```
 :
 Computes the perceptual hash for the given raw PCM data and sample rate, returning an integer hash value.
